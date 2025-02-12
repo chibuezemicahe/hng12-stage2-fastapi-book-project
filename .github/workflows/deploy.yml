@@ -32,7 +32,7 @@ jobs:
         uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          
+
       - name: Debug SSH Connection
         run: |
           mkdir -p ~/.ssh
@@ -41,7 +41,7 @@ jobs:
           ssh -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ${{ secrets.DEPLOY_SERVER_USER }}@${{ secrets.DEPLOY_SERVER_HOST }} "echo SSH Connected Successfully!"
 
 
-      # Step 5: Deploy to Google Cloud VM
+      # Step 5: Deploy to Googl Cloud VM
       - name: Deploy to Google Cloud
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_SERVER_USER }}@${{ secrets.DEPLOY_SERVER_HOST }} << 'EOF'
