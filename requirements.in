@@ -31,3 +31,4 @@ typing-extensions
 urllib3
 uvicorn
 wrapt
+gunicorn
