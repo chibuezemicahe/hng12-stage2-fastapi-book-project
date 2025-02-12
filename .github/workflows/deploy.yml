@@ -39,8 +39,7 @@ jobs:
           ssh -v -o StrictHostKeyChecking=no -o ForwardAgent=yes ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo SSH Connected Successfully!"
 
 
-      # Step 5: Deploy to Googl Cloud VM
-          # Step 6: Deploy to Google Cloud (Corrected)
+      # Step 6: Deploy to Googl Cloud V
       - name: Deploy to Google Cloud
         run: |
           ssh -o StrictHostKeyChecking=no -o ForwardAgent=yes ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << EOF
