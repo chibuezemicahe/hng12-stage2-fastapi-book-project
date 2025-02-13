@@ -71,9 +71,3 @@ async def get_book_by_id(book_id: int) -> Book:
         raise HTTPException(status_code=404, detail="Book not found")
     return book
 
-@router.get("/Hello", response_model=Book, status_code=status.HTTP_200_OK)
-async def get_book_by_id(book_id: int) -> Book:
-    book = db.books.get(book_id)
-    if not book:
-        raise HTTPException(status_code=404, detail="Book not found")
-    return book
